@@ -33,5 +33,5 @@ def get_recommendations():
         return jsonify([]), 500  # Return an empty list and a 500 error status
 
 
-if __name__=="__main__":
-    app.run(debug=True)
+# if __name__=="__main__":
+#     app.run(debug=True)
