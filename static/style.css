@@ -15,8 +15,83 @@ body {
 h1 {
     text-align: center;
 }
+nav{
+    display: flex;
+    height: 50px;
+    background-color: #0a7563;
+    justify-content: space-between;
+}
+.strnav{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 46px;
+    height: 46px;
+    padding: 0px 5px 0px 25px;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+nav ul li{
+    padding: 25px;
+}
+nav ul li a{
+    color: azure;
+    text-decoration: none;
+}
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.signin{
+    height: 30px;
+    border-radius: 3px;
+    margin-right: 5px;
+    padding: 5px;
+    background-color: rgb(2, 63, 48);;
+    color: azure; 
+    border: 0px;  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.signup{
+    height: 30px;
+    border-radius: 3px;
+    margin-right: 25px;
+    margin-left: 5px;
+    padding: 5px;
+    background-color: #fff;
+    border: 2px solid rgb(2, 63, 48);
+    color: rgb(2, 63, 48);
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+label[for="bookName1"]{
+    text-align: center;
+    display: flex;
+    justify-content: center; 
+    font-weight: bold;
+}
+label[for="bookName2"]{
+    text-align: center;
+    display: flex;
+    justify-content: center; 
+    color: dimgray;
+    margin-top: 2px;
+    margin-bottom: 10px;
+}
 input[type="text"] {
-    width: 100%;
+    width: 98%;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
