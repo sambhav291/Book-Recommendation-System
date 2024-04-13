@@ -7,11 +7,28 @@
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
+     <nav>
+     <div class="strnav">
+        <div class="logo">
+            <img src="/static/img/book_logo-removebg-preview.png" alt="">
+            <h3>Bookery</h3>
+        </div>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+        </ul>
+     </div>
+        <div class="button">
+            <button class="signin">Sign in</button>
+            <button class="signup">Sign up</button>
+        </div>
+    </nav>
     <div class="container">
         <h1>Book Recommendation System</h1>
         <form id="recommendationForm" action="/recommend" method="POST">
-            <label for="bookName">Enter a Book Name:</label>
-            <input type="text" id="bookName" name="bookName" placeholder="E.g., Harry Potter">
+            <label for="bookName1">Explore Your Next favourite Reads!</label>
+            <label for="bookName2">Enter a book name and get recomendations, what to read next</label>
+            <input type="text" id="bookName" name="bookName" placeholder="E.g. Icebound">
             <input type="submit" value="Get Recommendations">
         </form>
         <div class="result" id="resultSection" style="display: none;">
