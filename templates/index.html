@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -36,6 +36,101 @@
             <ul id="recommendationsList"></ul>
         </div>
     </div>
+
+<!-- </script src="/static/script.js"> -->
+<!--<script>
+  document.getElementById('recommendationForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var bookName = document.getElementById('bookName').value;
+    fetch('/recommend', {
+        method: 'POST',
+        body: JSON.stringify({ bookName: bookName }),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById('resultSection').style.display = 'block';
+        var recommendationsList = document.getElementById('recommendationsList');
+        recommendationsList.innerHTML = '';
+        data.forEach(function(book) {
+            var li = document.createElement('li');
+            li.textContent = book;
+            recommendationsList.appendChild(li);
+        });
+    });
+});
+</script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookery</title>
+    <link rel="icon" type="image/x-icon" href="/static/img/book_logo-removebg-preview.png">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <nav>
+     <div class="strnav">
+        <div class="logo">
+            <img src="/static/img/book_logo-removebg-preview.png" alt="">
+            <h3>Bookery</h3>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="">About</a></li>
+        </ul>
+     </div>
+        <div class="button">
+            <button class="signin">Sign in</button>
+            <button class="signup">Sign up</button>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Book Recommendation System</h1>
+        <form id="recommendationForm" action="/recommend" method="POST">
+            <label for="bookName1">Explore Your Next favourite Reads!</label>
+            <label for="bookName2">Enter a book name and get recomendations, what to read next</label>
+            <input type="text" id="bookName" name="bookName" placeholder="E.g. Icebound">
+            <input type="submit" value="Get Recommendations">
+        </form>
+        <div class="result" id="resultSection" style="display: none;">
+            <h2>Top 5 Book Recommendations:</h2>
+            <ul id="recommendationsList"></ul>
+        </div>
+        <div class="img1">
+            <img src="/static/img/bottom_book_image_2-removebg.png" alt="">
+        </div>
+    </div>
+    <div class="About">
+        <div>
+            <h1 >About Us</h1>
+            <p>Bookery is a Book Recomendation System which can suggest you 'What to Read next' after you give a name of the recent book you read. It uses Artificial Intelligence to provide you with best recomendations possible, so that you reading adventure continues. Bookery is developed by two dedicated college students of Maharaja Agrasen Institute of Technology.</p>
+        </div>
+        <div class="info">
+            <div class="aboutbox1">
+                <h4>Anisha kumari</h4>
+                <img src="/static/img/anisha kumari bookery.jpg" alt="">
+                <p style="margin-top: 0;">I am Anisha Kumari, a third-year Bachelor of Technology student majoring in Electrical and Electronics Engineering at Maharaja Agrasen Institute of Technology, New Delhi. With a keen interest in Artificial Intelligence, Machine Learning, and Data Science, I am dedicated to expanding my knowledge and skills in these fields. Eager to apply my academic background and passion for AI/ML to real-world projects, I am committed to making meaningful contributions to the field and advancing my career in technology.</p>
+            </div>
+            <div class="aboutbox2">
+                <h4>Sambhav Magotra</h4>
+                <img src="/static/img/my photo bookery.jpg" alt="">
+                <p style="margin-top: 0;">I am Sambhav Magotra, a second-year Bachelor of Technology student majoring in Information Technology at Maharaja Agrasen Institute of Technology, New Delhi. I have an interest towords website development, Machine Learning and Artificial Intelligence. I anm always enthusiastic to apply and brush up my skill through real world projects. Dedicated to contribute my part in the best way possible in the field. </p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <h3 class="footh3">" Books are the plane, and the train, and the road. They are the destination, and the journey. They are home. "</h3>
+        <p class="footp">~Anna Quindlen</p>
+        <div class="img2">
+            <img src="/static/img/bottom_book_image-removebg.png">
+        </div>
+    </footer>
 
 <!-- </script src="/static/script.js"> -->
 <script>
